@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Happy Birthday Lakshita 💗 | Beautiful Pink Card</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #ffd9e8 0%, #ffc0d9 50%, #ffb0cc 100%);
+      background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart-float {
+      position: absolute;
+      color: rgba(255, 120, 150, 0.6);
+      font-size: 1.2rem;
+      animation: floatHeart linear infinite;
+      user-select: none;
+    }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
+
+    .card-container {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .birthday-card {
+      background: #fffafd;
+      border-radius: 60px 60px 70px 70px;
+      box-shadow: 0 35px 55px rgba(255, 80, 120, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 2px solid #ffb8d0;
+      margin-bottom: 20px;
+    }
+
+    .birthday-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #ffb0c8, #ff9ab8, #ff85aa);
+      padding: 40px 25px 35px;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+
+    .cake-icon {
+      font-size: 4.2rem;
+      filter: drop-shadow(2px 6px 12px rgba(0,0,0,0.2));
+      animation: bounceGentle 2s infinite ease;
+      display: inline-block;
+    }
+
+    @keyframes bounceGentle {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+
+    .greeting {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 2px 2px 0 #c43a62;
+      margin-top: 12px;
+    }
+
+    .name-highlight {
+      font-size: 3.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff8f0, #ffefdf, #ffe8d8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(255,240,200,0.8);
+      position: relative;
+      padding: 0 10px;
+      animation: gentleGlow 1.8s ease-in-out infinite;
+    }
+
+    @keyframes gentleGlow {
+      0%, 100% { text-shadow: 0 0 10px rgba(255,220,180,0.6); }
+      50% { text-shadow: 0 0 25px rgba(255,200,150,0.9), 0 0 8px #ffd9a5; }
+    }
+
+    .name-highlight::before {
+      content: '🌸';
+      font-size: 1.8rem;
+      position: absolute;
+      left: -35px;
+      top: 0;
+      animation: gentleWave 1.5s infinite;
+    }
+
+    .name-highlight::after {
+      content: '🎀';
+      font-size: 1.8rem;
+      position: absolute;
+      right: -35px;
+      top: 0;
+      animation: gentleWave 1.5s infinite reverse;
+    }
+
+    @keyframes gentleWave {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-5px) rotate(5deg); }
+    }
+
+    .badge-pink {
+      background: rgba(255,245,250,0.4);
+      backdrop-filter: blur(4px);
+      border-radius: 40px;
+      padding: 6px 20px;
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .photo-gallery {
+      padding: 25px 22px 15px;
+      background: #fffafd;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #d45a7a;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .gallery-title i {
+      font-size: 1.5rem;
+      color: #ff7b9e;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 15px;
+    }
+
+    .photo-card {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      cursor: pointer;
+      box-shadow: 0 12px 22px rgba(255, 90, 120, 0.25);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      background: linear-gradient(145deg, #ffe0ea, #ffd0df);
+    }
+
+    .photo-card:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 18px 30px rgba(255, 70, 110, 0.4);
+    }
+
+    /* ✅ Gallery images: crop from TOP so face appears from upper side */
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: 0.3s;
+    }
+
+    .photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(200, 60, 90, 0.85));
+      padding: 10px 6px;
+      text-align: center;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      transform: translateY(100%);
+      transition: 0.25s;
+      backdrop-filter: blur(2px);
+    }
+
+    .photo-card:hover .photo-overlay {
+      transform: translateY(0);
+    }
+
+    .message-area {
+      padding: 5px 22px 10px;
+    }
+
+    .message {
+      background: linear-gradient(120deg, #fff0f5, #ffe9f0);
+      padding: 22px 20px;
+      border-radius: 45px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #a33f60;
+      font-weight: 500;
+      border: 1px solid #ffc0d6;
+    }
+
+    .message i {
+      color: #ff6b90;
+      margin: 0 4px;
+    }
+
+    .wishes-card {
+      background: #fff2f7;
+      margin: 18px 22px;
+      border-radius: 40px;
+      padding: 16px 18px;
+      text-align: center;
+      border: 1px solid #ffccdf;
+    }
+
+    .wishes-card p {
+      font-style: italic;
+      font-weight: 500;
+      color: #bf5a7a;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 18px 22px;
+    }
+
+    .stat-box {
+      background: white;
+      border-radius: 35px;
+      padding: 12px 6px;
+      text-align: center;
+      flex: 1;
+      box-shadow: 0 6px 14px rgba(255, 120, 150, 0.2);
+      border: 1px solid #ffccdf;
+    }
+
+    .stat-box i {
+      font-size: 1.7rem;
+      color: #ff7b9e;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-box span {
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #b34e70;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #c27792;
+      padding: 15px 20px 25px;
+      border-top: 1px dashed #ffcddf;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: linear-gradient(95deg, #ff6b8e, #ff4d74);
+      border: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 14px 32px;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 12px 28px rgba(255, 60, 100, 0.5);
+      animation: btnGlow 1.2s infinite alternate;
+    }
+
+    @keyframes btnGlow {
+      0% { box-shadow: 0 12px 28px rgba(255, 60, 100, 0.5); }
+      100% { box-shadow: 0 15px 35px rgba(255, 80, 120, 0.7), 0 0 0 3px rgba(255,220,180,0.5); }
+    }
+
+    .floating-btn:hover {
+      transform: translateX(-50%) scale(1.03);
+    }
+
+    /* POPUP STYLES - no crop, full image */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .popup-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-card {
+      background: linear-gradient(145deg, #fff5fa, #ffeef4);
+      border-radius: 60px;
+      max-width: 90vw;
+      width: 420px;
+      max-height: 85vh;
+      overflow-y: auto;
+      text-align: center;
+      padding: 15px 20px 20px;
+      box-shadow: 0 35px 55px rgba(255, 80, 120, 0.5);
+      border: 3px solid #ffb0c8;
+      animation: popupBounce 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+
+    .popup-card::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+
+    @keyframes popupBounce {
+      0% { transform: scale(0.7); opacity: 0; }
+      80% { transform: scale(1.02); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-photo {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 10px auto;
+      border-radius: 35px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+      border: 3px solid #ffb8d0;
+      background: #ffeef4;
+    }
+
+    .popup-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .popup-photo img:hover {
+      transform: scale(1.02);
+    }
+
+    .popup-card h2 {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #ff6b8e, #ff9eb5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 5px 0;
+    }
+
+    .popup-name {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff88aa, #ffb347);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    .popup-card p {
+      margin: 8px 0 4px;
+      font-size: 0.9rem;
+    }
+
+    .popup-close {
+      background: linear-gradient(95deg, #ff6b8e, #ff4d74);
+      border: none;
+      color: white;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: 0.2s;
+    }
+
+    .popup-close:hover {
+      transform: scale(0.96);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.25s;
+    }
+
+    .lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 30px;
+      border: 4px solid #ffb8d0;
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: white;
+      font-size: 2.2rem;
+      cursor: pointer;
+      background: rgba(255,100,130,0.6);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .toast-message {
+      position: fixed;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ff6b8e, #ff9eb5);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      z-index: 1100;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      animation: fadeInUp 0.3s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    @media (max-width: 550px) {
+      .name-highlight { font-size: 2.2rem; }
+      .name-highlight::before, .name-highlight::after { font-size: 1.3rem; }
+      .name-highlight::before { left: -25px; }
+      .name-highlight::after { right: -25px; }
+      .greeting { font-size: 1.4rem; }
+      .floating-btn { padding: 10px 20px; font-size: 0.85rem; bottom: 18px; gap: 8px; }
+      .toast-message { font-size: 0.8rem; padding: 8px 16px; white-space: nowrap; bottom: 100px; }
+      .popup-card { width: 90%; padding: 12px 15px 18px; max-height: 80vh; }
+      .popup-photo { max-width: 240px; }
+      .popup-card h2 { font-size: 1.6rem; }
+      .popup-name { font-size: 1.4rem; }
+      .popup-card p { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="floating-hearts" id="floatingHearts"></div>
+<div class="lightbox" id="lightbox">
+  <span class="close-lightbox"><i class="fas fa-times"></i></span>
+  <img id="lightbox-img" src="">
+</div>
+
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-card">
+    <div class="popup-photo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOtvzWKc_1xrShUEqwYmiZkn-Ec07qwY6sWpIQQvTZKv_UpCYiH9wN7XeiXLYf0vr9r-9Eyu2dQ2Ep05rQOwowp4-75SLo4HiKS4y0tVnTQYlj699Krktwi2jcWsYeE9AX9DdnOOK9g330li8eYcaCxG-zDEFFxeVRF-K2vYYnxG8Di5yKo2nU_LrrhmBZ/s1280/1000123387.jpg" alt="Birthday Celebration">
+    </div>
+    <div style="font-size: 1.3rem;">🎈🎉🎀🌸</div>
+    <h2>🎂 HAPPY BIRTHDAY 🎂</h2>
+    <div>
+      <span class="popup-name">✨ LAKSHITA ✨</span>
+    </div>
+    <p>💖 You are the most beautiful soul! 💖<br>May your day be filled with magic & love!</p>
+    <div style="font-size: 1.1rem; margin: 5px 0;">🥰😘💗🎁🍰</div>
+    <button class="popup-close" id="popupCloseBtn">✨ Let's Celebrate ✨</button>
+  </div>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="card-container">
+  <div class="birthday-card">
+    <div class="card-header">
+      <div class="cake-icon">🎀🌸🎂✨</div>
+      <div class="greeting">Happy Birthday <br><span class="name-highlight">Lakshita</span></div>
+      <div class="badge-pink"><i class="fas fa-heart"></i> Princess of the Day <i class="fas fa-heart"></i></div>
+    </div>
+
+    <div class="photo-gallery">
+      <div class="gallery-title"><i class="fas fa-crown"></i> Beautiful Moments <i class="fas fa-camera"></i></div>
+      <div class="photo-grid" id="photoGrid"></div>
+      <div style="text-align: center; font-size: 0.7rem; color:#d97a98;"><i class="fas fa-hand-pointer"></i> Tap any photo to view larger</div>
+    </div>
+
+    <div class="message-area">
+      <div class="message">
+        <i class="fas fa-star"></i> <i class="fas fa-heart"></i> <strong>To my dearest Lakshita</strong> <i class="fas fa-heart"></i> <i class="fas fa-star"></i><br><br>
+        You're the most precious gem, the sweetest smile, and the prettiest soul. May your birthday sparkle with joy, laughter, and endless love!<br>
+        You deserve all the happiness in the universe 💖✨🥰
+      </div>
+    </div>
+
+    <div class="wishes-card">
+      <div style="font-size: 1.4rem; letter-spacing: 5px;">💗🌸🎀💖🍰🎈</div>
+      <p>“Every day is special, but today is YOUR day. Shine bright, dream big, and celebrate YOU!”</p>
+      <div style="font-size: 1.4rem; letter-spacing: 5px;">😘🥰💕✨🎂💗</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box"><i class="fas fa-birthday-cake"></i><span>Magical Day</span><span style="display:block;">✨🎉✨</span></div>
+      <div class="stat-box"><i class="fas fa-heartbeat"></i><span>Infinite Love</span><span style="display:block;">💗∞💗</span></div>
+      <div class="stat-box"><i class="fas fa-smile-beam"></i><span>Happy Vibes</span><span style="display:block;">🥳🎊</span></div>
+    </div>
+
+    <div class="footer">
+      <i class="fas fa-heart" style="color:#ff88aa;"></i> Made with love for Lakshita <i class="fas fa-heart" style="color:#ff88aa;"></i><br>💖 Stay blessed, beautiful! 💖
+    </div>
+  </div>
+</div>
+
+<button class="floating-btn" id="floatingCelebrateBtn">
+  <i class="fas fa-gift"></i> Send Love & Wishes 💖 <i class="fas fa-heart"></i>
+</button>
+
+<script>
+  // Floating Hearts
+  const heartsContainer = document.getElementById('floatingHearts');
+  const heartSymbols = ['❤️', '💖', '💕', '💗', '🌸', '🎀', '💝', '💓', '🥰', '😘'];
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart-float');
+    heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+    heart.style.fontSize = (Math.random() * 20 + 12) + 'px';
+    heart.style.left = Math.random() * 100 + '%';
+    const duration = Math.random() * 8 + 5;
+    heart.style.animationDuration = duration + 's';
+    heart.style.animationDelay = Math.random() * 4 + 's';
+    heartsContainer.appendChild(heart);
+    setTimeout(() => heart.remove(), duration * 1000);
+  }
+  setInterval(() => { if(heartsContainer.children.length < 40) createHeart(); }, 400);
+  for(let i=0;i<18;i++) setTimeout(createHeart, i*180);
+
+  // Gallery images (9 photos)
+  const galleryImages = [
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCYNVT29t_iBhMKyxbV8hRWLSCq4Go6ID0tzjhvKZR4DzriJ2rMVoiqOUAJpzTUOQqNJBpeDioC5iqpj1NCH5n87Hl7RGFuhzTyK9aYH_5KjziHgKSigSSKf8JmX7MB9u8hKIX90ylDTc84fEejZ20PyW8XEu9w5gHnU1SUDRuZroHRdKWn32bm-cYpgJ4/s1280/1000123394.jpg", title: "✨ Special Memory" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju2O87L0dOZvj_8UrqqvAX8hCjPhsNZrTbXq0WQZHdyUj16oBPq-xjkJLsH6zRYlN13mSQGJpF58cLE2m1UujHfrjEpgrRy8DHxkBRdB5vjID8aA1vHW0jGM87p_O1zMbXnvQvT0pIshg7tZL5bhTpAzb3nGtIUp-QYJWGT0HqkZwtPECehZLZTYSTKwM7/s1280/1000123393.jpg", title: "🌸 Sweet Moments" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQbIHBLJNhyphenhyphenPC7gOeQOPtYNusmrvFGNHACDwd6FIUlAUYsWAs1mF-VsDAwTNUl5wRg_NKA750YCuBnIz3gUsD3mrgoqPQ-Bbv11Oj8N2WyehCGOCMu5fW-mSNaPlShReYvC19LGoEM0imx_VFO2r5fd-2-6kJi_EyvY0kR7oh-oYQ72yWvGKScdqH06AGe/s1281/1000123390.jpg", title: "💖 Happy Moments" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBa802JUmTtIBQNnL3ukj0MH609vC6RQvCj2ZIHeFsgIJ1kGWyxMn_q2oZles0YyaduM_gWe32BA4BFgW-68RD_NqAPhmmrovFR4w8DBIbpESSx4eHpenYTPQ8RbFrSSdGgcCqkHHqOLvABSpMfMd4atB6SEg_ntSp1BEboU3UaGMOKlYgz5lzwzpJEcIB/s1280/1000123391.jpg", title: "🎀 Beautiful You" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg01sDPP6o3YYkIrDoDj102owqY-OuNXM7v4gCYv9ciCVxqyb1xGo6nTiIAZoAJlmL2hwHG8tB-R5wktFvW_r7TQN14uPQ8p0viu0RORwlOriJ2LcVe4Nvnk1lt9Oe_BIMec_dcveEzdeX63gZOqR9l59CBfuyE9qDq8PifJurhsOcN6lFvVQWsbLDBfZND/s1280/1000123392.jpg", title: "💕 Love & Joy" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivbuBZ-ryRnAhjg-5WsJrhzvL5YwU5Ke-lGCighVGDEeRFq1s9mcohcE7sjvW_iJXsC_6xLBS-3zPR9wWqYsI4Ljc0reKFs8tHYUeNosA_ivw1bTGJydWosRAwodmztB63gB3MRw8Z3o8CGE5Xyniukvgsc8mUhey7dhov4zNqvHOuWTjSr06uksjUldCP/s1280/1000123389.jpg", title: "🌟 Shine Bright" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbrT1PWttNmDY_wS2_aWIL-CLb3VLwD4CQ49YXiXkkoeMi3Gi4pQ3eq6gFFMPXDVxkjTXzqQy9zSyMkAct6Xt-suHdtb1y8opebWL4hm-QFD32QunY8eNeEg7Xhqv-l9wIsM-9nInKgliLHpBgF3tPbEo_An2t2T31O3iVhTsHR2PLxOYEOCdv43CmYCkZ/s1281/1000123388.jpg", title: "💗 Sweetheart" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_S_RokXjYTT8moZLEMPBPHhtYUsoVQ-El5lx4ZGpNdPmeQraVblTYc-ox9IisJ6qyi17m5V0KCfDec_JStmq7FVKxZR2TNq40Jj7-RgsaNEifNjHQVcrMYK4JPvMNACTlwOKyawcB_FOi5wM1MRKO5h_jmHox8j5UH0KntNJ5FKzM1LVglUSh9aqINIgn/s1280/1000123386.jpg", title: "🎉 Celebrate" },
+    { url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_XSNl-mV0kFWo5ipkJeMjyOV5nlE_V5vwjUe0phfBF4eZByF6xk0J9dGL2zyVs_lBTBNdzjSF0wYQINjYfIm9D1pMS68DyUEhdsMyyzvIvoBLRyBkCCYJWSxRlVQHfCYSA2MiPMEdPMHkNed-sboaN2sKx5SkuWUVag8d_RKkg_IVykd4ysjhIj-pd1W/s960/1000123395.jpg", title: "✨ Magic Day" }
+  ];
+
+  const photoGrid = document.getElementById('photoGrid');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeLightbox = document.querySelector('.close-lightbox');
+  function buildGallery() {
+    photoGrid.innerHTML = '';
+    galleryImages.forEach(img => {
+      const photoDiv = document.createElement('div');
+      photoDiv.className = 'photo-card';
+      const imgElement = document.createElement('img');
+      imgElement.src = img.url;
+      imgElement.alt = img.title;
+      imgElement.loading = "lazy";
+      const overlay = document.createElement('div');
+      overlay.className = 'photo-overlay';
+      overlay.innerHTML = `<i class="fas fa-heart"></i> ${img.title}`;
+      photoDiv.appendChild(imgElement);
+      photoDiv.appendChild(overlay);
+      photoDiv.addEventListener('click', () => { lightboxImg.src = img.url; lightbox.classList.add('active'); });
+      photoGrid.appendChild(photoDiv);
+    });
+  }
+  buildGallery();
+  closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('active'); });
+
+  // Popup Handler
+  const popupOverlay = document.getElementById('popupOverlay');
+  const popupCloseBtn = document.getElementById('popupCloseBtn');
+  window.addEventListener('load', () => { setTimeout(() => popupOverlay.classList.add('active'), 500); });
+  popupCloseBtn.addEventListener('click', () => {
+    popupOverlay.classList.remove('active');
+    startPinkConfetti(2000);
+  });
+
+  // Confetti System (same as before)
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  let width = window.innerWidth, height = window.innerHeight;
+  let confettiParticles = [], animationId = null, activeConfetti = false;
+  function resizeCanvas() { width = window.innerWidth; height = window.innerHeight; canvas.width = width; canvas.height = height; }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+  class PinkConfetti {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height - height;
+      this.size = Math.random() * 8 + 4;
+      this.speedY = Math.random() * 8 + 5;
+      this.speedX = (Math.random() - 0.5) * 3.5;
+      this.rotation = Math.random() * 360;
+      this.rotSpeed = (Math.random() - 0.5) * 0.12;
+      const pinkShades = ['#ffb7c9', '#ff9eb8', '#ff88ae', '#ff6b90', '#ffa5c2'];
+      this.color = pinkShades[Math.floor(Math.random() * pinkShades.length)];
+      this.type = Math.random() > 0.65 ? 'heart' : 'circle';
+    }
+    update() { this.y += this.speedY; this.x += this.speedX; this.rotation += this.rotSpeed; return !(this.y > height + 70 || this.x < -70 || this.x > width + 70); }
+    draw() {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.rotation * Math.PI / 180);
+      if(this.type === 'heart') {
+        ctx.font = `${this.size+5}px "Font Awesome 6 Free"`;
+        ctx.fillStyle = this.color;
+        ctx.fillText('❤️', -this.size/2, this.size/2);
+      } else {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(0, 0, this.size/1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+  function startPinkConfetti(duration = 3000) {
+    if(animationId) cancelAnimationFrame(animationId);
+    activeConfetti = true;
+    confettiParticles = [];
+    for(let i=0;i<200;i++) confettiParticles.push(new PinkConfetti());
+    const startTime = performance.now();
+    function animateConfetti(now) {
+      if(!activeConfetti) return;
+      ctx.clearRect(0, 0, width, height);
+      let anyAlive = false;
+      for(let p of confettiParticles) { if(p.update()) anyAlive = true; p.draw(); }
+      if(anyAlive && (now - startTime < duration)) animationId = requestAnimationFrame(animateConfetti);
+      else { ctx.clearRect(0, 0, width, height); cancelAnimationFrame(animationId); activeConfetti = false; }
+    }
+    animationId = requestAnimationFrame(animateConfetti);
+  }
+  
+  function showWishMessage() {
+    const toast = document.createElement('div');
+    toast.className = 'toast-message';
+    toast.innerHTML = '💖✨ wishes sent with love ✨💖<br>✨ Happy Birthday Lakshita! ✨';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(-20px)';
+      toast.style.transition = 'all 0.4s ease';
+      setTimeout(() => toast.remove(), 500);
+    }, 3000);
+  }
+  
+  function burstCelebration() {
+    startPinkConfetti(4500);
+    for(let i=0;i<40;i++) {
+      setTimeout(() => {
+        const emojiDiv = document.createElement('div');
+        const emojis = ['💗', '🌸', '🎀', '💖', '🎂', '🥰', '😘', '💕', '✨', '🎈', '🍰'];
+        emojiDiv.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        emojiDiv.style.position = 'fixed';
+        emojiDiv.style.left = Math.random() * window.innerWidth + 'px';
+        emojiDiv.style.bottom = '20px';
+        emojiDiv.style.fontSize = (Math.random() * 28 + 20) + 'px';
+        emojiDiv.style.pointerEvents = 'none';
+        emojiDiv.style.zIndex = '1000';
+        emojiDiv.style.transition = 'all 1.3s ease-out';
+        document.body.appendChild(emojiDiv);
+        setTimeout(() => { emojiDiv.style.transform = `translateY(-${Math.random() * 550 + 200}px) rotate(${Math.random() * 360}deg)`; emojiDiv.style.opacity = '0'; }, 15);
+        setTimeout(() => emojiDiv.remove(), 1400);
+      }, i * 45);
+    }
+    showWishMessage();
+  }
+  
+  document.getElementById('floatingCelebrateBtn').addEventListener('click', burstCelebration);
+  window.addEventListener('load', () => setTimeout(() => startPinkConfetti(1500), 1000));
+  document.querySelector('.birthday-card').addEventListener('click', (e) => {
+    if(e.target.closest('.floating-btn')) return;
+    const heartClick = document.createElement('div');
+    heartClick.innerHTML = '💖';
+    heartClick.style.position = 'fixed';
+    heartClick.style.left = e.clientX + 'px';
+    heartClick.style.top = e.clientY + 'px';
+    heartClick.style.fontSize = '32px';
+    heartClick.style.pointerEvents = 'none';
+    heartClick.style.zIndex = '9999';
+    heartClick.style.transform = 'translate(-50%, -50%)';
+    heartClick.style.transition = 'all 0.6s ease-out';
+    document.body.appendChild(heartClick);
+    setTimeout(() => { heartClick.style.transform = 'translate(-50%, -80px) scale(1.4)'; heartClick.style.opacity = '0'; }, 20);
+    setTimeout(() => heartClick.remove(), 700);
+  });
+</script>
+</body>
+</html>
